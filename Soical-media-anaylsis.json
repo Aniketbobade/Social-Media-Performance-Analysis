@@ -1,13 +1,13 @@
 {
-  "id": "e58e82c6-1509-4356-b055-fb69c902ee87",
+  "id": "8cd83fa1-397a-45b3-8461-9e3717d9691f",
   "data": {
     "nodes": [
       {
-        "id": "ParseData-d1FDT",
+        "id": "ParseData-1DeaL",
         "type": "genericNode",
         "position": {
-          "x": 129.38376652035163,
-          "y": -1730.5838887331927
+          "x": 1208.6681274786927,
+          "y": 38
         },
         "data": {
           "node": {
@@ -131,23 +131,19 @@
             "lf_version": "1.1.1"
           },
           "type": "ParseData",
-          "id": "ParseData-d1FDT"
+          "id": "ParseData-1DeaL"
         },
         "selected": false,
         "width": 320,
-        "height": 301,
-        "dragging": false,
-        "positionAbsolute": {
-          "x": 129.38376652035163,
-          "y": -1730.5838887331927
-        }
+        "height": 302,
+        "dragging": false
       },
       {
-        "id": "GroqModel-ghP3n",
+        "id": "GroqModel-cx0rC",
         "type": "genericNode",
         "position": {
-          "x": 1030.341484710491,
-          "y": -1477.3300732265732
+          "x": 2109.625845668832,
+          "y": 291.2538155066195
         },
         "data": {
           "node": {
@@ -435,23 +431,19 @@
             "lf_version": "1.1.1"
           },
           "type": "GroqModel",
-          "id": "GroqModel-ghP3n"
+          "id": "GroqModel-cx0rC"
         },
         "selected": false,
         "width": 320,
-        "height": 669,
-        "dragging": false,
-        "positionAbsolute": {
-          "x": 1030.341484710491,
-          "y": -1477.3300732265732
-        }
+        "height": 672,
+        "dragging": false
       },
       {
-        "id": "OpenAIEmbeddings-45h9e",
+        "id": "OpenAIEmbeddings-XnTQL",
         "type": "genericNode",
         "position": {
-          "x": -1059.284360958341,
-          "y": -1184.709654887593
+          "x": 20,
+          "y": 583.8742338455997
         },
         "data": {
           "node": {
@@ -628,7 +620,7 @@
                 "placeholder": "",
                 "show": true,
                 "name": "model",
-                "value": "text-embedding-3-small",
+                "value": "text-embedding-ada-002",
                 "display_name": "Model",
                 "advanced": false,
                 "dynamic": false,
@@ -926,23 +918,19 @@
             "lf_version": "1.1.1"
           },
           "type": "OpenAIEmbeddings",
-          "id": "OpenAIEmbeddings-45h9e"
+          "id": "OpenAIEmbeddings-XnTQL"
         },
-        "selected": false,
+        "selected": true,
         "width": 320,
-        "height": 319,
-        "positionAbsolute": {
-          "x": -1059.284360958341,
-          "y": -1184.709654887593
-        },
+        "height": 320,
         "dragging": false
       },
       {
-        "id": "AstraDB-E6G99",
+        "id": "AstraDB-Q6HCm",
         "type": "genericNode",
         "position": {
-          "x": -341.62108835167476,
-          "y": -1380.3463414545317
+          "x": 737.6632726066663,
+          "y": 388.23754727866094
         },
         "data": {
           "node": {
@@ -1131,7 +1119,7 @@
                 "placeholder": "",
                 "show": true,
                 "name": "collection_name",
-                "value": "data",
+                "value": "my_final_data12",
                 "display_name": "Collection Name",
                 "advanced": false,
                 "dynamic": false,
@@ -1170,7 +1158,7 @@
                 "placeholder": "",
                 "show": true,
                 "name": "keyspace",
-                "value": "posts",
+                "value": "default_keyspace",
                 "display_name": "Keyspace",
                 "advanced": false,
                 "dynamic": false,
@@ -1465,23 +1453,19 @@
             "lf_version": "1.1.1"
           },
           "type": "AstraDB",
-          "id": "AstraDB-E6G99"
+          "id": "AstraDB-Q6HCm"
         },
         "selected": false,
         "width": 320,
-        "height": 741,
-        "dragging": false,
-        "positionAbsolute": {
-          "x": -341.62108835167476,
-          "y": -1380.3463414545317
-        }
+        "height": 746,
+        "dragging": false
       },
       {
-        "id": "Prompt-wpKgo",
+        "id": "Prompt-QhJ5y",
         "type": "genericNode",
         "position": {
-          "x": 546.4100224744903,
-          "y": -1658.7383430391194
+          "x": 1625.6943834328313,
+          "y": 109.84554569407328
         },
         "data": {
           "node": {
@@ -1513,7 +1497,7 @@
                 "placeholder": "",
                 "show": true,
                 "name": "template",
-                "value": "System:You are a Senior Data Analyst. Based on the insights provided,\nPlease analyze the data or trends and provide insights. \nIf you don't know the answer to the question, respond with, \"I don't know the answer\" without attempting to fabricate an answer.\n----------------------\n{context}\n\nHuman: {question}",
+                "value": "System: You are a data analysis assistant. Your goal is to provide direct, concise answers to questions based on the dataset. Avoid including detailed calculations or unnecessary data in your response .provide only the result, no additional data. Focus on clarity and brevity.\n\n{context}\n\nHuman: {question}",
                 "display_name": "Template",
                 "advanced": false,
                 "dynamic": false,
@@ -1614,26 +1598,23 @@
             "error": null,
             "edited": false,
             "metadata": {},
-            "tool_mode": false
+            "tool_mode": false,
+            "lf_version": "1.1.1"
           },
           "type": "Prompt",
-          "id": "Prompt-wpKgo"
+          "id": "Prompt-QhJ5y"
         },
         "selected": false,
         "width": 320,
-        "height": 431,
-        "dragging": false,
-        "positionAbsolute": {
-          "x": 546.4100224744903,
-          "y": -1658.7383430391194
-        }
+        "height": 432,
+        "dragging": false
       },
       {
-        "id": "ChatOutput-v1Nbk",
+        "id": "ChatOutput-yFtWS",
         "type": "genericNode",
         "position": {
-          "x": 1485.6530293769647,
-          "y": -1394.9450740275552
+          "x": 2564.9373903353057,
+          "y": 373.6388147056375
         },
         "data": {
           "node": {
@@ -1892,23 +1873,18 @@
             "lf_version": "1.1.1"
           },
           "type": "ChatOutput",
-          "id": "ChatOutput-v1Nbk"
+          "id": "ChatOutput-yFtWS"
         },
-        "selected": true,
+        "selected": false,
         "width": 320,
-        "height": 233,
-        "positionAbsolute": {
-          "x": 1485.6530293769647,
-          "y": -1394.9450740275552
-        },
-        "dragging": false
+        "height": 233
       },
       {
-        "id": "ChatInput-msnkN",
+        "id": "ChatInput-Q0pk3",
         "type": "genericNode",
         "position": {
-          "x": -902.6593784975369,
-          "y": -1698.821971538881
+          "x": 167.6835615207275,
+          "y": 171.4705803876846
         },
         "data": {
           "node": {
@@ -2029,7 +2005,7 @@
                 "placeholder": "",
                 "show": true,
                 "name": "input_value",
-                "value": "how is reel performing as compare to videos ? ",
+                "value": "Are there any outliers in the dataset for shares?",
                 "display_name": "Text",
                 "advanced": false,
                 "input_types": [
@@ -2189,29 +2165,29 @@
             "lf_version": "1.1.1"
           },
           "type": "ChatInput",
-          "id": "ChatInput-msnkN"
+          "id": "ChatInput-Q0pk3"
         },
         "selected": false,
         "width": 320,
         "height": 233,
+        "dragging": false,
         "positionAbsolute": {
-          "x": -902.6593784975369,
-          "y": -1698.821971538881
-        },
-        "dragging": false
+          "x": 167.6835615207275,
+          "y": 171.4705803876846
+        }
       }
     ],
     "edges": [
       {
-        "source": "AstraDB-E6G99",
-        "target": "ParseData-d1FDT",
-        "sourceHandle": "{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-E6G99œ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}",
-        "targetHandle": "{œfieldNameœ:œdataœ,œidœ:œParseData-d1FDTœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
-        "id": "reactflow__edge-AstraDB-E6G99{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-E6G99œ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}-ParseData-d1FDT{œfieldNameœ:œdataœ,œidœ:œParseData-d1FDTœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "source": "AstraDB-Q6HCm",
+        "target": "ParseData-1DeaL",
+        "sourceHandle": "{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-Q6HCmœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "targetHandle": "{œfieldNameœ:œdataœ,œidœ:œParseData-1DeaLœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-AstraDB-Q6HCm{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-Q6HCmœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}-ParseData-1DeaL{œfieldNameœ:œdataœ,œidœ:œParseData-1DeaLœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
         "data": {
           "targetHandle": {
             "fieldName": "data",
-            "id": "ParseData-d1FDT",
+            "id": "ParseData-1DeaL",
             "inputTypes": [
               "Data"
             ],
@@ -2219,7 +2195,7 @@
           },
           "sourceHandle": {
             "dataType": "AstraDB",
-            "id": "AstraDB-E6G99",
+            "id": "AstraDB-Q6HCm",
             "name": "search_results",
             "output_types": [
               "Data"
@@ -2227,19 +2203,19 @@
           }
         },
         "selected": false,
-        "className": "",
-        "animated": false
+        "animated": false,
+        "className": ""
       },
       {
-        "source": "ParseData-d1FDT",
-        "target": "Prompt-wpKgo",
-        "sourceHandle": "{œdataTypeœ:œParseDataœ,œidœ:œParseData-d1FDTœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
-        "targetHandle": "{œfieldNameœ:œcontextœ,œidœ:œPrompt-wpKgoœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
-        "id": "reactflow__edge-ParseData-d1FDT{œdataTypeœ:œParseDataœ,œidœ:œParseData-d1FDTœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-Prompt-wpKgo{œfieldNameœ:œcontextœ,œidœ:œPrompt-wpKgoœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "source": "ParseData-1DeaL",
+        "target": "Prompt-QhJ5y",
+        "sourceHandle": "{œdataTypeœ:œParseDataœ,œidœ:œParseData-1DeaLœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
+        "targetHandle": "{œfieldNameœ:œcontextœ,œidœ:œPrompt-QhJ5yœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ParseData-1DeaL{œdataTypeœ:œParseDataœ,œidœ:œParseData-1DeaLœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-Prompt-QhJ5y{œfieldNameœ:œcontextœ,œidœ:œPrompt-QhJ5yœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
         "data": {
           "targetHandle": {
             "fieldName": "context",
-            "id": "Prompt-wpKgo",
+            "id": "Prompt-QhJ5y",
             "inputTypes": [
               "Message",
               "Text"
@@ -2248,7 +2224,7 @@
           },
           "sourceHandle": {
             "dataType": "ParseData",
-            "id": "ParseData-d1FDT",
+            "id": "ParseData-1DeaL",
             "name": "text",
             "output_types": [
               "Message"
@@ -2256,19 +2232,19 @@
           }
         },
         "selected": false,
-        "className": "",
-        "animated": false
+        "animated": false,
+        "className": ""
       },
       {
-        "source": "Prompt-wpKgo",
-        "target": "GroqModel-ghP3n",
-        "sourceHandle": "{œdataTypeœ:œPromptœ,œidœ:œPrompt-wpKgoœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
-        "targetHandle": "{œfieldNameœ:œsystem_messageœ,œidœ:œGroqModel-ghP3nœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
-        "id": "reactflow__edge-Prompt-wpKgo{œdataTypeœ:œPromptœ,œidœ:œPrompt-wpKgoœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-GroqModel-ghP3n{œfieldNameœ:œsystem_messageœ,œidœ:œGroqModel-ghP3nœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "source": "Prompt-QhJ5y",
+        "target": "GroqModel-cx0rC",
+        "sourceHandle": "{œdataTypeœ:œPromptœ,œidœ:œPrompt-QhJ5yœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "targetHandle": "{œfieldNameœ:œsystem_messageœ,œidœ:œGroqModel-cx0rCœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-Prompt-QhJ5y{œdataTypeœ:œPromptœ,œidœ:œPrompt-QhJ5yœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-GroqModel-cx0rC{œfieldNameœ:œsystem_messageœ,œidœ:œGroqModel-cx0rCœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "data": {
           "targetHandle": {
             "fieldName": "system_message",
-            "id": "GroqModel-ghP3n",
+            "id": "GroqModel-cx0rC",
             "inputTypes": [
               "Message"
             ],
@@ -2276,7 +2252,7 @@
           },
           "sourceHandle": {
             "dataType": "Prompt",
-            "id": "Prompt-wpKgo",
+            "id": "Prompt-QhJ5y",
             "name": "prompt",
             "output_types": [
               "Message"
@@ -2284,19 +2260,19 @@
           }
         },
         "selected": false,
-        "className": "",
-        "animated": false
+        "animated": false,
+        "className": ""
       },
       {
-        "source": "GroqModel-ghP3n",
-        "target": "ChatOutput-v1Nbk",
-        "sourceHandle": "{œdataTypeœ:œGroqModelœ,œidœ:œGroqModel-ghP3nœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-v1Nbkœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
-        "id": "reactflow__edge-GroqModel-ghP3n{œdataTypeœ:œGroqModelœ,œidœ:œGroqModel-ghP3nœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-v1Nbk{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-v1Nbkœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "source": "GroqModel-cx0rC",
+        "target": "ChatOutput-yFtWS",
+        "sourceHandle": "{œdataTypeœ:œGroqModelœ,œidœ:œGroqModel-cx0rCœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-yFtWSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-GroqModel-cx0rC{œdataTypeœ:œGroqModelœ,œidœ:œGroqModel-cx0rCœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-yFtWS{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-yFtWSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "data": {
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "ChatOutput-v1Nbk",
+            "id": "ChatOutput-yFtWS",
             "inputTypes": [
               "Message"
             ],
@@ -2304,7 +2280,7 @@
           },
           "sourceHandle": {
             "dataType": "GroqModel",
-            "id": "GroqModel-ghP3n",
+            "id": "GroqModel-cx0rC",
             "name": "text_output",
             "output_types": [
               "Message"
@@ -2312,18 +2288,19 @@
           }
         },
         "selected": false,
-        "className": "",
-        "animated": false
+        "animated": false,
+        "className": ""
       },
       {
-        "source": "ChatInput-msnkN",
-        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-msnkNœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "AstraDB-E6G99",
-        "targetHandle": "{œfieldNameœ:œsearch_inputœ,œidœ:œAstraDB-E6G99œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "source": "ChatInput-Q0pk3",
+        "target": "AstraDB-Q6HCm",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-Q0pk3œ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "targetHandle": "{œfieldNameœ:œsearch_inputœ,œidœ:œAstraDB-Q6HCmœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ChatInput-Q0pk3{œdataTypeœ:œChatInputœ,œidœ:œChatInput-Q0pk3œ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-AstraDB-Q6HCm{œfieldNameœ:œsearch_inputœ,œidœ:œAstraDB-Q6HCmœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "data": {
           "targetHandle": {
             "fieldName": "search_input",
-            "id": "AstraDB-E6G99",
+            "id": "AstraDB-Q6HCm",
             "inputTypes": [
               "Message"
             ],
@@ -2331,26 +2308,27 @@
           },
           "sourceHandle": {
             "dataType": "ChatInput",
-            "id": "ChatInput-msnkN",
+            "id": "ChatInput-Q0pk3",
             "name": "message",
             "output_types": [
               "Message"
             ]
           }
         },
-        "id": "reactflow__edge-ChatInput-msnkN{œdataTypeœ:œChatInputœ,œidœ:œChatInput-msnkNœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-AstraDB-E6G99{œfieldNameœ:œsearch_inputœ,œidœ:œAstraDB-E6G99œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
         "animated": false,
         "className": ""
       },
       {
-        "source": "ChatInput-msnkN",
-        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-msnkNœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "Prompt-wpKgo",
-        "targetHandle": "{œfieldNameœ:œquestionœ,œidœ:œPrompt-wpKgoœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "source": "ChatInput-Q0pk3",
+        "target": "Prompt-QhJ5y",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-Q0pk3œ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "targetHandle": "{œfieldNameœ:œquestionœ,œidœ:œPrompt-QhJ5yœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ChatInput-Q0pk3{œdataTypeœ:œChatInputœ,œidœ:œChatInput-Q0pk3œ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Prompt-QhJ5y{œfieldNameœ:œquestionœ,œidœ:œPrompt-QhJ5yœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
         "data": {
           "targetHandle": {
             "fieldName": "question",
-            "id": "Prompt-wpKgo",
+            "id": "Prompt-QhJ5y",
             "inputTypes": [
               "Message",
               "Text"
@@ -2359,26 +2337,27 @@
           },
           "sourceHandle": {
             "dataType": "ChatInput",
-            "id": "ChatInput-msnkN",
+            "id": "ChatInput-Q0pk3",
             "name": "message",
             "output_types": [
               "Message"
             ]
           }
         },
-        "id": "reactflow__edge-ChatInput-msnkN{œdataTypeœ:œChatInputœ,œidœ:œChatInput-msnkNœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Prompt-wpKgo{œfieldNameœ:œquestionœ,œidœ:œPrompt-wpKgoœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "selected": false,
         "animated": false,
         "className": ""
       },
       {
-        "source": "OpenAIEmbeddings-45h9e",
-        "sourceHandle": "{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-45h9eœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
-        "target": "AstraDB-E6G99",
-        "targetHandle": "{œfieldNameœ:œembedding_modelœ,œidœ:œAstraDB-E6G99œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "source": "OpenAIEmbeddings-XnTQL",
+        "target": "AstraDB-Q6HCm",
+        "sourceHandle": "{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-XnTQLœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "targetHandle": "{œfieldNameœ:œembedding_modelœ,œidœ:œAstraDB-Q6HCmœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-OpenAIEmbeddings-XnTQL{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-XnTQLœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-AstraDB-Q6HCm{œfieldNameœ:œembedding_modelœ,œidœ:œAstraDB-Q6HCmœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
         "data": {
           "targetHandle": {
             "fieldName": "embedding_model",
-            "id": "AstraDB-E6G99",
+            "id": "AstraDB-Q6HCm",
             "inputTypes": [
               "Embeddings"
             ],
@@ -2386,26 +2365,26 @@
           },
           "sourceHandle": {
             "dataType": "OpenAIEmbeddings",
-            "id": "OpenAIEmbeddings-45h9e",
+            "id": "OpenAIEmbeddings-XnTQL",
             "name": "embeddings",
             "output_types": [
               "Embeddings"
             ]
           }
         },
-        "id": "reactflow__edge-OpenAIEmbeddings-45h9e{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-45h9eœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-AstraDB-E6G99{œfieldNameœ:œembedding_modelœ,œidœ:œAstraDB-E6G99œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
         "animated": false,
         "className": ""
       }
     ],
     "viewport": {
-      "x": 658.971729507506,
-      "y": 906.3877766715643,
-      "zoom": 0.4590235525647202
+      "x": -75.64301322713504,
+      "y": -139.0305100020048,
+      "zoom": 0.7101337017566776
     }
   },
-  "description": "Smart Chains, Smarter Conversations.",
-  "name": "Soical-media-anaylsis",
+  "description": "Harness the Power of Conversational AI.",
+  "name": "final-flow",
   "last_tested_version": "1.1.1",
   "endpoint_name": null,
   "is_component": false
