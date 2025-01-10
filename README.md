@@ -10,9 +10,10 @@ The solution is divided into two primary parts:
    - Generate sample data in a randomized format for analysis.
    - Store the generated data in a CSV file.
    - Load the data into Astra Vector DB using two approaches:
-     - **LangFlow**: A no-code/low-code tool for data workflows.
-     - **Python Script**: A programmatic approach for data ingestion.
-   - Data is loaded into two separate collections for comparison of both approaches.
+    - **LangFlow**: A no-code/low-code tool for data workflows. In this approach, text is parsed using the split-text method with `
+    ` as the separator to process each row of the dataset. OpenAI embeddings are then generated using the `text-embedding-3-small` model to create vector representations for database insertion.
+    - **Python Script**: A programmatic approach for data ingestion. In this approach, OpenAI embeddings are utilized to generate embeddings based on the content of each row in the dataset. The embeddings are stored in the vector column, while the actual data is stored in the content column as key-value pairs representing a single post.
+    - Data is loaded into two separate collections for comparison of both approaches.
 
 2. **Chatbot for Analysis Using the Vector Database**
    - A chatbot interface to interact with the database and generate insights based on user input.
@@ -21,6 +22,12 @@ The solution is divided into two primary parts:
         - User input is passed to the vector search in Astra Vector DB.
         - The vector search retrieves similar data and provides context for analysis.
      2. **Prompt Creation**:
+        - For System define prompt we used as below
+        ```
+        System: You are a data analysis assistant. Your goal is to provide direct, concise answers to questions based on the dataset. Avoid including detailed calculations or unnecessary data in your response .provide only the result, no additional data. Focus on clarity and brevity.
+
+        ``` 
+        above propt will give direct answer intead of explaining step by step.
         - The retrieved context, user input, and a system-defined prompt are combined to create a structured query.
      3. **LLM Response Generation**:
         - The structured prompt is sent to the AI model.
@@ -64,4 +71,10 @@ The solution is divided into two primary parts:
 ## Prerequisites
 
 - Astra Vector DB
-- LangFlow
+- LangFlow (optional for no-code/low-code workflows)
+
+## Outputs 
+- When I ask chatbot how many reels present in the database it return proper count
+![alt text](image.png)
+- We can check comparison data also
+![alt text](image-2.png)
